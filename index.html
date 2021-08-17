@@ -19,11 +19,40 @@
                 Es el area de trabajo, donde rara vez vamos a estar utilozando la linea de comandos, salvo por le inicio del proyecto o a lo sumo la eliminacion del mismo. Se refiere a la carpeta donde iniciamos el repositorio t basicamente donde vamos a crear, modificar y eliminar los archivos que formen parte de nuestro proyecto.
             </p>
             <ul class="commands">
-                <li><strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, architecto dolor obcaecati explicabo tenetur harum.</strong>Lorem ipsum dolor sit.</li>
-                <li><strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, architecto dolor obcaecati explicabo tenetur harum.</strong>Lorem ipsum dolor sit.</li>
-                <li><strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, architecto dolor obcaecati explicabo tenetur harum.</strong>Lorem ipsum dolor sit amet.</li>
+                <li><strong>Lorem ipsum </strong>Lorem ipsum dolor sit.</li>
+                <li><strong>Lorem ipsum </strong>Lorem ipsum dolor sit.</li>
+                <li><strong>Lorem ipsum </strong>Lorem ipsum dolor sit amet.</li>
                 <li><strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, architecto dolor obcaecati explicabo tenetur harum.</strong>Lorem ipsum dolor sit amet consectetur.</li>
                 <li><strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, architecto dolor obcaecati explicabo tenetur harum.</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Staging Area (INDEX)</h3>
+            <p>
+                El area de control de cambios, corresponde a un archivo que se encuentra en la carpeta .git y se utiliza para realizar las capturas de pantalla del codigo(snapshot) de los diferentes archivos del proyecto. Aqui se realiza el seguimiento de los mismos para realizar la confirmacion y poder acceder a los diferentes cambios dentro de la historia de nuestro proyecto. Es importante tener en cuenta que todo archivo que no sea agregado al INDEX, no se podrá recuperar en caso de ser eliminado.
+            </p>
+            <ul class="commands">
+                <li><strong>git status</strong>Muestra el estado de los archivos con respecto a la ultima confirmacion, en caso que exista</li>
+                    <ul>
+                        <li><strong>untracked:</strong>al archivo no se le esta realizando seguimiento</li>
+                        <li><strong>staged:</strong>los archivos fueron agregados, pero aun no estan confirmados</li>
+                        <li><strong>modified:</strong>el archivo difiere con respecto a lo almacenado en la ultima confirmacion</li>
+                        <li><strong>commited:</strong>los cambios fueron almacenados</li>
+                    </ul>
+                <li><strong>git add &lt;file</strong>agrega al INDEX el/los archivo/archivos seleccionado</li>
+                <li><strong>git rm --cached &lt;file</strong>quita del INDEX el archivo seleccionado</li>
+                <li><strong>git restore --staged &lt;file</strong>remueve los cambios de los archivos agregados al INDEX</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Repository</h3>
+            <p>
+                Area donde se almacenan los cambios, mediante confirmaciones, en un formato BLOB(Binary Large Object File). Solamente se confirman las modificaciones agregadas al INDEX; y mediante apuntadores podemos navegar dentro del historial.
+            </p>
+            <ul>
+                <li><strong>git commit</strong>abre el editor para realizar confirmacion</li>
+                <li><strong>git blame &lt;file</strong>muestra linea por linea los autores de las confirmaciones, en caso que existan</li>
+                <li><strong>git log</strong>muestra el historial de confirmaciones</li>
             </ul>
         </article>
     </section>
